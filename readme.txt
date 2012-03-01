@@ -1,6 +1,6 @@
 === User Management Tools ===
 Contributors: scribu, appthemes
-Tags: admin, category, tag, term, taxonomy, hierarchy, organize, manage
+Tags: admin, manage, roles, users, multisite, network
 Requires at least: 3.2
 Tested up to: 3.3
 Stable tag: trunk
