@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: User Management Tools
-Version: 1.0
+Version: 1.1
 Description: Allows you to bulk-add users to a blog in a multisite install
 Author: AppThemes
 Author URI: http://appthemes.com
@@ -48,7 +48,7 @@ class User_Management_Tools {
 		global $wpdb;
 
 		$user_query->query_from = "FROM $wpdb->users ";
-		$user_query->query_where = 'WHERE 1=1 ';
+		$user_query->query_where = str_replace( "AND (wp_usermeta.meta_key = '{$wpdb->prefix}capabilities' )", '', $user_query->query_where );
 	}
 
 	// http://core.trac.wordpress.org/ticket/18995
@@ -96,6 +96,7 @@ jQuery(function($){
 
 	if ( $('.umt-network .current').length ) {
 		$('.subsubsub :not(.umt-network) .current').removeClass('current');
+		$('#search-submit').before('<input type="hidden" name="umt_network" value="1" />');
 	}
 });
 </script>

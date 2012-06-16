@@ -2,7 +2,7 @@
 Contributors: scribu, appthemes
 Tags: admin, manage, roles, users, multisite, network
 Requires at least: 3.2
-Tested up to: 3.3
+Tested up to: 3.4
 Stable tag: trunk
 
 Allows super-admins to quickly add users to a particular blog in a multisite installation.
@@ -26,6 +26,9 @@ Note that you have to be a super-admin to be able to do this.
 1. "Entire Network" link
 
 == Changelog ==
+
+= 1.1 =
+* make search work
 
 = 1.0 =
 * initial release
